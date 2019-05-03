@@ -1,0 +1,9 @@
+{
+  "name": "Register",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Register.js",
+  "dependencies": {
+    "querystring": "^0.2.0"
+  }
+}
