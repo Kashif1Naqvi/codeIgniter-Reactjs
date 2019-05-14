@@ -15,14 +15,10 @@ class Usermodel extends CI_model {
     return $this->db->insert_id();
   }
   public function login_mode($user_email){
-    $query = $this->db->where("user_email='$user_email'")
-                      ->get("users");
-    return $query->result();
+    
+      $query = $this->db->get_where('users',array("user_email"=>$user_email));
+      return $query->row_array();
   }
-  // public function login_mode($user_email){
-  //     $query = $this->db->get_where('users',$user_email);
-  //     echo $query->row_array();
-  // }
 
   public function categories(){
     $q = $this->db->get('category');
